@@ -62,7 +62,7 @@ try {
             """
           }
           sh """
-            gsutil -q -m -h "Cache-Control:private, max-age=0, no-transform" rsync -d -r dist/ gs://charts.mldigital.be/kubernetes/
+            gsutil -m -h "Cache-Control:private, max-age=0, no-transform" rsync -d -r dist/ gs://charts.mldigital.be/kubernetes/
           """
         }
       }
