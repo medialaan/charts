@@ -12,12 +12,12 @@ try {
   podTemplate(label: 'k8s-' + podTemplateSuffix, name: 'jenkins-agent-' + podTemplateSuffix, serviceAccount: 'jenkins', volumes: [hostPathVolume(hostPath: '/mnt/disks/ssd0', mountPath: '/home/jenkins')], nodeSelector: 'cloud.google.com/gke-preemptible=true,cloud.google.com/gke-local-ssd=true', nodeUsageMode: 'EXCLUSIVE', containers: [
     containerTemplate(
       name: 'jnlp',
-      image: 'medialaan/jenkins-jnlp-slave:3.16-1',
+      image: 'eu.gcr.io/medialaan-production/jenkins-jnlp-slave:3.16-1',
       args: '${computer.jnlpmac} ${computer.name}'
     ),
     containerTemplate(
       name: 'gcp',
-      image: 'medialaan/gcp:0.1.0',
+      image: 'eu.gcr.io/medialaan-production/gcp:0.1.0',
       ttyEnabled: true,
       command: 'cat',
       envVars: [
