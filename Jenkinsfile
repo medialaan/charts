@@ -17,7 +17,7 @@ try {
     ),
     containerTemplate(
       name: 'gcp',
-      image: 'medialaan/gcp:1.0.0',
+      image: 'medialaan/gcp:0.1.0',
       ttyEnabled: true,
       command: 'cat',
       envVars: [
