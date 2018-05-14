@@ -124,6 +124,8 @@ The following table lists the configurable parameters of the Traefik chart and t
 | `acme.persistence.accessMode`   | `ReadWriteOnce` or `ReadOnly`                                        | `ReadWriteOnce`                           |
 | `acme.persistence.existingClaim`| An Existing PVC name                                                 | `nil`                                     |
 | `acme.persistence.size`         | Minimum size of the volume requested                                 | `1Gi`                                     |
+| `consul.enabled`                | Use Consul as configuration backend                                  | `false`                                   |
+| `consul.endpoint`               | Consul endpoint                                                      | `consul:8500`                             |
 | `dashboard.enabled`             | Whether to enable the Traefik dashboard                              | `false`                                   |
 | `dashboard.domain`              | Domain for the Traefik dashboard                                     | `traefik.example.com`                     |
 | `dashboard.service.annotations` | Annotations for the Traefik dashboard Service definition, specified as a map | None                |
